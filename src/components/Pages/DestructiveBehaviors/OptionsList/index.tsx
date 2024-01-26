@@ -17,7 +17,6 @@ const OptionsList = () => {
         setSelectedOption(option.text)
         updateUserSelections('SET_DESTRUCTIVE_BEHAVIORS', option.text)
     }
-
     return (
         <>
             <S.OptionsGrid>
