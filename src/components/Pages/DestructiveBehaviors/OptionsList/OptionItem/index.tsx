@@ -8,7 +8,7 @@ interface OptionItemProps {
 }
 
 const OptionItem = ({ icon, text, onClick, isSelected }: OptionItemProps) => (
-    <S.OptionContainer onClick={onClick} isSelected={isSelected}>
+    <S.OptionContainer onClick={onClick} $isSelected={isSelected}>
         <S.Icon src={icon} alt="" />
         <S.Text>{text}</S.Text>
     </S.OptionContainer>

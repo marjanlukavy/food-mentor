@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export const GoalsGrid = styled.section`
     display: grid;
@@ -27,15 +28,11 @@ export const GoalCard = styled.div`
         background-color 0.3s;
     cursor: pointer;
     &:hover {
-        transform: scale(1.05); /* Slightly enlarge the card */
-        background: linear-gradient(
-            180deg,
-            #f0f0f0 0%,
-            #e0e0e0 100%
-        ); /* Lighten the background */
+        transform: scale(1.05);
+        background: linear-gradient(180deg, #f0f0f0 0%, #e0e0e0 100%);
     }
 `
-export const GoalImage = styled.img`
+export const GoalImage = styled(LazyLoadImage)`
     width: auto;
     height: auto;
 `
