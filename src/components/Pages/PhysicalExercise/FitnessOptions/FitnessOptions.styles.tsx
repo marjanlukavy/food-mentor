@@ -2,8 +2,13 @@ import styled from 'styled-components'
 
 export const ComponentContainer = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
 `
 
 export const ImageContainer = styled.div`
@@ -11,6 +16,11 @@ export const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+
+    img {
+        height: auto;
+    }
 `
 
 export const OptionsContainer = styled.div`
