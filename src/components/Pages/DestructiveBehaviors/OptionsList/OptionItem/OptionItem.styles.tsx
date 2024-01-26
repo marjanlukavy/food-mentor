@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const OptionContainer = styled.div<{ isSelected: boolean }>`
+export const OptionContainer = styled.div<{ $isSelected: boolean }>`
     display: flex;
     align-items: center;
     background: #ffffff;
@@ -10,7 +10,8 @@ export const OptionContainer = styled.div<{ isSelected: boolean }>`
     border: 1px solid #e1e1e1;
     cursor: pointer;
     transition: background-color 0.3s;
-    background-color: ${(props) => (props.isSelected ? '#f0f0f0' : '#fff')};
+
+    background-color: ${(props) => (props.$isSelected ? '#f0f0f0' : '#fff')};
 
     &:hover {
         background-color: #f0f0f0;
