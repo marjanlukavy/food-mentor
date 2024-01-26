@@ -3,10 +3,24 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export const GoalsGrid = styled.section`
     display: grid;
-    grid-template-columns: repeat(2, 172px);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
     justify-content: center;
+
+    @media (max-width: 600px) {
+        grid-template-columns: auto;
+
+        align-items: center;
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1025px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 `
 
 export const GoalCard = styled.div`
