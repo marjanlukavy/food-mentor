@@ -1,19 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+import reportWebVitals from './reportWebVitals'
+import DestructiveBehaviors from './components/Pages/DestructiveBehaviors'
+import MeasureYourself from './components/Pages/MeasureYourself'
+import PhysicalExercise from './components/Pages/PhysicalExercise'
+import GoalSection from './components/Pages/TheGoal'
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { UserSelectionsProvider } from './context/UserSelectionsContext'
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <GoalSection />,
+    },
+    {
+        path: '/measure',
+        element: <MeasureYourself />,
+    },
+    {
+        path: '/behaviors',
+        element: <DestructiveBehaviors />,
+    },
+    {
+        path: '/exercise',
+        element: <PhysicalExercise />,
+    },
+])
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    <React.StrictMode>
+        <UserSelectionsProvider>
+            <RouterProvider router={router} />
+        </UserSelectionsProvider>
+    </React.StrictMode>
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()
