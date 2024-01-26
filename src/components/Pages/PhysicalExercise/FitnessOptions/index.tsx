@@ -1,6 +1,6 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import FitnessImage from '../../../../assets/icons/active-girl.svg'
+import { fitnessOptions } from '../../../../constants/fitnessOptions'
 import { useUserSelections } from '../../../../context/UserSelectionsContext'
 import * as S from './FitnessOptions.styles'
 
@@ -12,13 +12,6 @@ const FitnessOptions = () => {
         updateUserSelections('SET_PHYSICAL_ACTIVITY', fitnessOption)
         navigate('/')
     }
-
-    const fitnessOptions = [
-        'Hardly at all',
-        'Fitness 1-2 times a week',
-        'Fitness 3-5 times a week',
-        'Fitness 5-7 times a week',
-    ]
 
     return (
         <S.ComponentContainer>

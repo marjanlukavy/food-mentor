@@ -17,12 +17,12 @@ export const ToggleButtonGroup = styled.div`
     overflow: hidden;
 `
 
-export const ToggleButton = styled.button<{ active: boolean }>`
+export const ToggleButton = styled.button<{ $active: boolean }>`
     flex-grow: 1;
 
     border: none;
     background-color: ${(props) =>
-        props.active ? 'rgba(95, 203, 57, 0.20)' : '#FFFFFF'};
+        props.$active ? 'rgba(95, 203, 57, 0.20)' : '#FFFFFF'};
     color: #5fcb39;
     padding: 10px 20px;
     font-weight: bold;

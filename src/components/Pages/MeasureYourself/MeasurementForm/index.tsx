@@ -28,13 +28,13 @@ const MeasurementForm = () => {
         <S.Container>
             <S.ToggleButtonGroup>
                 <S.ToggleButton
-                    active={unit === 'IMPERIAL'}
+                    $active={unit === 'IMPERIAL'}
                     onClick={() => handleUnitChange('IMPERIAL')}
                 >
                     IMPERIAL
                 </S.ToggleButton>
                 <S.ToggleButton
-                    active={unit === 'METRIC'}
+                    $active={unit === 'METRIC'}
                     onClick={() => handleUnitChange('METRIC')}
                 >
                     METRIC

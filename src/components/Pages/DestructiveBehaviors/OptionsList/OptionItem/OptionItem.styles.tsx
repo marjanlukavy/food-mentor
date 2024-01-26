@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export const OptionContainer = styled.div<{ $isSelected: boolean }>`
     display: flex;
@@ -18,7 +19,7 @@ export const OptionContainer = styled.div<{ $isSelected: boolean }>`
     }
 `
 
-export const Icon = styled.img`
+export const Icon = styled(LazyLoadImage)`
     width: 30px;
     height: 30px;
     flex-shrink: 0;

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { goals } from '../../../../constants/goals'
 import { useUserSelections } from '../../../../context/UserSelectionsContext'
+import GoalItem from './GoalItem'
 import * as S from './GoalsList.styles'
 
 const GoalsList = () => {
@@ -14,11 +15,8 @@ const GoalsList = () => {
 
     return (
         <S.GoalsGrid>
-            {goals.map((goal, index) => (
-                <S.GoalCard key={index} onClick={() => selectGoal(goal.title)}>
-                    <S.GoalTitle>{goal.title}</S.GoalTitle>
-                    <S.GoalImage src={goal.image} alt={goal.altText} />
-                </S.GoalCard>
+            {goals.map((goal) => (
+                <GoalItem key={goal.id} goal={goal} onSelect={selectGoal} />
             ))}
         </S.GoalsGrid>
     )
